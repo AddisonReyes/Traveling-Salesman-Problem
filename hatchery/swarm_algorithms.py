@@ -21,7 +21,7 @@ def floyd_warshall(grafo):
 # Algoritmo de la colonia de hormigas (ACO)
 class ACO:
     #@profile
-    def __init__(self, cities, ants = 1, generations = 1, ev_rate = 0.5, alpha = 1, beta = 2, start_city = None):
+    def __init__(self, cities, ants = 30, generations = 100, ev_rate = 0.5, alpha = 1, beta = 2, start_city = None):
         self.cities = np.array(floyd_warshall(cities))
         self.ants = ants
         self.generations = generations

@@ -22,7 +22,7 @@ def floyd_warshall(grafo):
 # Algoritmos genéticos
 class GeneticAlgorithm:
     #@profile
-    def __init__(self, cities, start_city = None,  population_size = 5, num_generations = 20):
+    def __init__(self, cities, start_city = None,  population_size = 5, num_generations = 2000):
         self.cities = floyd_warshall(cities)
         self.population_size = population_size
         self.num_generations = num_generations
