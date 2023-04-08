@@ -20,28 +20,28 @@ def main():
 				 [6, 3, 12, 0, 9],
 				 [15, 7, inf, 8, 0]]
 
-	ciudades3 = [[inf, 2, inf, 5],
-				 [1, inf, 3, inf],
-				 [inf, 2, 10, inf],
-				 [5, 6, 1, inf]]
+	ciudades3 = [[inf, 2, inf, 3],
+				 [1, inf, inf, 1],
+				 [1, inf, inf, 1],
+				 [5, inf, 2, inf]]
 
 	ciudades4 = [[0, 2, inf, inf, inf, 1, 4],
-				 [inf, 0, 6, 4, 5, 19, inf],
-				 [inf, 7, 0, 1, 2, 8, 2],
-				 [inf, 3, 12, 0, 9, 20, 10],
+				 [inf, inf, inf, inf, 5, 19, inf],
+				 [inf, inf, inf, inf, 8, 2],
+				 [inf, inf, inf, inf, 9, 20, 10],
 				 [inf, 7, inf, 8, 0, 1, 3],
 				 [inf, 5, 2, inf, 1, 0, 7],
-				 [6, 6, inf, inf, inf, 9, 0],]
+				 [6, 6, inf, inf, inf, 9, 0]]
 
 	start_city = 0
 
 	aco_t1 = time.time()
-	aco = sa.ACO(cities = ciudades2, start_city = start_city)
+	aco = sa.ACO(cities = ciudades3, start_city = start_city)
 	aco_solution, aco_cost = aco.solve()
 	aco_t2 = time.time()
 
 	ga_t1 = time.time()
-	ga = gea.GeneticAlgorithm(cities = ciudades2, start_city = start_city)
+	ga = gea.GeneticAlgorithm(cities = ciudades3, start_city = start_city)
 	ga_solution, ga_cost = ga.solve()
 	ga_t2 = time.time()
 	
