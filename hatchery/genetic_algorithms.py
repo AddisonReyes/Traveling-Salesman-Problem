@@ -130,14 +130,14 @@ class GeneticAlgorithm:
             combined_population = list(zip(population, fitness)) + list(zip(new_population, new_fitness))
             sorted_population = sorted(combined_population, key = lambda x: x[1])
 
-            #population_aux = []
-            #for solution in sorted_population:
-            #    if solution[0][-1] == self.start_city:
-            #        population_aux.append(solution)
+            population_aux = []
+            for solution in sorted_population:
+                if solution[0][-1] == self.start_city:
+                    population_aux.append(solution)
 
-            #population_aux = sorted(population_aux, key = lambda x: x[1])
-            #new_combined_population = population_aux + sorted_population
-            population = [x[0] for x in sorted_population[:self.population_size]]
+            population_aux = sorted(population_aux, key = lambda x: x[1])
+            new_combined_population = population_aux + sorted_population
+            population = [x[0] for x in new_combined_population[:self.population_size]]
             
             #print("1:",population_aux,"\n") 
             #print("2:",sorted_population,"\n")
